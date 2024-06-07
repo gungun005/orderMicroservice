@@ -1,34 +1,41 @@
 const flipService=require('../services/flipService');
 
-const getFlipOrder=(req,res)=>{
-let getFlipOrder=flipService.getFlipOrder(req.body);
+const getFlipOrder=async(req,res)=>{
+let getFlipOrder=await flipService.getFlipOrder(req.body);
 res.send(getFlipOrder);
 };
-const postFlipOrder=(req,res)=>{
-let postFlipOrder=flipService.postFlipOrder(req.body);
+
+const getFlipOrderBySearch =async(req,res)=>{
+let getFlipOrderBySearch=await flipService.getFlipOrderBySearch(req.body);
+res.send(getFlipOrderBySearch);
+};
+
+const postFlipOrder=async(req,res)=>{
+let postFlipOrder=await flipService.postFlipOrder(req.body);
 res.send(postFlipOrder);
 };
 
-const getFlipOrderById=(req,res)=>{
-let getFlipOrderById=flipService.getFlipOrderById(req.body);
+const getFlipOrderById=async(req,res)=>{
+let getFlipOrderById=await flipService.getFlipOrderById(req.body);
 res.send(getFlipOrderById);
 };
-const postFlipOrderById=(req,res)=>{
-let postFlipOrderById=flipService.postFlipOrderById(req.body);
+const postFlipOrderById=async(req,res)=>{
+let postFlipOrderById=await flipService.postFlipOrderById(req.body);
 res.send(postFlipOrderById);
 };
 
-const getAllFlipOrder= (req,res)=>{
-let getAllFlipOrder=flipService.getAllFlipOrder(req.body); 
+const getAllFlipOrder=async (req,res)=>{
+let getAllFlipOrder=await flipService.getAllFlipOrder(req.body); 
 res.send(getAllFlipOrder);
 };
 
-const cancelFlipOrder=(req,res)=>{
-let cancelFlipOrder=flipService.cancelFlipOrder(req.body);
+const cancelFlipOrder=async (req,res)=>{
+let cancelFlipOrder=await flipService.cancelFlipOrder(req.body);
 res.send(cancelFlipOrder);
 };
 module.exports={
     getFlipOrder,
+    getFlipOrderBySearch,
     postFlipOrder,
     getFlipOrderById,
     postFlipOrderById,
