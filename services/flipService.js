@@ -5,6 +5,11 @@ const getFlipOrder=(body)=>{
 let getFlipOrder=flipRepository.getFlipOrder(body);
 return(getFlipOrder);
 };
+const getFlipOrderBySearch =(body)=>{
+let getFlipOrderBySearch=flipRepository.getFlipOrderBySearch(body);
+return(getFlipOrderBySearch);
+};
+
 const postFlipOrder=(body)=>{
 let postFlipOrder=flipRepository.postFlipOrder(body);
 return(postFlipOrder);
@@ -30,6 +35,7 @@ return(cancelFlipOrder);
 };
 module.exports={
     getFlipOrder,
+    getFlipOrderBySearch,
     postFlipOrder,
     getFlipOrderById,
     postFlipOrderById,
