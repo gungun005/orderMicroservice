@@ -9,6 +9,9 @@ router.route('/getOrder')
 .get(flipController.getFlipOrder)
 .post(flipController.postFlipOrder)
 
+router.route('/getOrder/BySearch')
+.get(flipController.getFlipOrderBySearch)
+
 router.route('/getOrderById')
 .get(flipController.getFlipOrderById)
 .post(flipController.postFlipOrderById)
